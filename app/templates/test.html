@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>PicMania | Caption Generator</title> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> 
+	<script type="text/css" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script> 
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+	<section> 
+		<div class="container p-5"> 
+			<div class="row mb-5 text-center text-white"> 
+				<div class="col-lg-10 mx-auto " style="color:	#00BFFF; ">
+					<h1 class="display-4 " style="font-weight: 600;">Caption Generator</h1> 
+					<p class="lead" style="font-weight: 800; ">Upload the Image & get the analysis done</p>
+				</div>
+			</div>
+			<div class="row" style="opacity: 80%;"> 
+				<div class="col-lg-5 mx-auto" > 
+					<div class="p-5 bg-white shadow rounded-lg" >
+						<img src="https://res.cloudinary.com/mhmd/image/upload/v1557366994/img_epm3iz.png" alt="" width="100" class="d-block mx-auto mb-4 rounded-pill">
+						<h6 class="text-center mb-4 text-muted"> Upload Image</h6> 
+						<form method="post" action="/uploader" enctype="multipart/form-data"> 
+							<div class="custom-file overflow-hidden rounded-pill mb-5">
+								<input id="pic" type="file" accept=".jpg, .png" name="pic" class="custom-file-input rounded-pill" required> 
+								<label for="pic" id="fLabel" class="custom-file-label rounded-pill">Choose file</label>
+								<!-- <input id="pic" type="file" accept=".jpg, .png, .jpeg" name="pic" class="custom-file-input rounded-pill" required> 
+								<label for="pic" id="fLabel" class="custom-file-label rounded-pill">Choose file</label> -->
+							</div>
+							<input type="submit" id="submit" class="btn btn-primary btn-block">
+						</form> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">$('#pic').change(function (){$('#fLabel')[0].innerText=$('#pic')[0].files[0].name;});</script>
+</body>
+</html>

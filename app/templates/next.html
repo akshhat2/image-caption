@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>PicMania | Caption Generator</title> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> 
+	<script type="text/css" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script> 
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/next.css') }}">
+</head>
+<body>
+	<section> 
+		<div class="container p-5"> 
+			<div class="row mb-5 text-center text-white"> 
+				<!-- <div class="col-lg-10 mx-auto " style="color:	#00BFFF; ">
+					<h1 class="display-4 " style="font-weight: 600;">Caption Generator</h1> 
+					<p class="lead" style="font-weight: 800; ">Upload the Image & get the analysis done</p>
+				</div> -->
+			</div>
+			<div class="row"> 
+				<div class="col-lg-5 mx-auto" > 
+					<div class="p-5  shadow rounded-lg" >
+						<img src="/static/css/temp5.jpg" alt="User Image" width="350" class="d-block mx-auto mb-4 rounded-pill">
+						<!-- <h5 style="color: black"><b> Snowboarder is snowboarding down snowy hill </h5> -->
+							<h5 style="color: black"><b> {{message}} </h5>
+						<!-- <img src="{{ user_image }}" alt="User Image"> -->
+						
+							<!-- <input type="submit" id="submit" class="btn btn-primary btn-block"> -->
+							<a href="{{url_for ('test')}}" class="btn btn-primary btn-block" role="button">Check Other</a>
+						</form> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- <script type="text/javascript">$('#audio').change(function (){$('#fLabel')[0].innerText=$('#audio')[0].files[0].name;});</script> -->
+</body>
+</html>
